@@ -7,11 +7,16 @@
 
 <div>
     {%  for room in rooms %}
+    <div>
+        <a href="">
+            <h5>
+                {{ room.id }} -- {{ room.name }}
+            </h5>
+        </a>
+    </div>
 
     <div>
-        <h5>
-            {{ room.id }} -- {{ room.name }}
-        </h5>
+        
     </div>
 
     {% endfor %}
