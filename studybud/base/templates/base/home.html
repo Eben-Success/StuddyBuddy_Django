@@ -4,23 +4,17 @@
 
 <h1>Homepage </h1>
 
-
 <div>
+    <div>
     {%  for room in rooms %}
     <div>
-        <a href="">
             <h5>
-                {{ room.id }} -- {{ room.name }}
+                {{ room.id }} -- <a href="/room/{{ room.id }}">  {{ room.name }} </a>
             </h5>
-        </a>
-    </div>
-
-    <div>
-        
     </div>
 
     {% endfor %}
 </div>
-
+</div>
 
 {% endblock  %} %}
