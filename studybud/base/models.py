@@ -2,6 +2,8 @@ from django.db import models
 
 # Create your models here.
 
+
+
 class Room(models.Model):
     #host = 
     #topic = 
@@ -15,6 +17,11 @@ class Room(models.Model):
     # saves the first time we save an instance
     created = models.DateTimeField(auto_now_add=True)
 
-    
+
     def __str__(self):
         return self.name
+
+
+class Message(models.Model):
+    #user = 
+    #room = 
