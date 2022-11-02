@@ -10,7 +10,7 @@ rooms = [
 ]
 
 def home(request):
-    rooms = Room.objects
+    rooms = Room.objects.all()
     context = {
         'rooms': rooms
     }
