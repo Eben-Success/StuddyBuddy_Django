@@ -14,3 +14,7 @@ class Room(models.Model):
     updated = models.DateTimeField(auto_now=True)
     # saves the first time we save an instance
     created = models.DateTimeField(auto_now_add=True)
+
+    
+    def __str__(self):
+        return self.name
