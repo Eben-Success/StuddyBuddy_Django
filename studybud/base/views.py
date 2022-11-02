@@ -14,5 +14,6 @@ def home(request):
     }
     return render(request, 'home.html', context)
 
-def room(request):
+# pass pk parameter in room
+def room(request, pk):
     return render(request, 'room.html')
