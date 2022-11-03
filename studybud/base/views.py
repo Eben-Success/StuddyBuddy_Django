@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Room
+from .models import Room, Topic
 from .forms import RoomForm
 
 # Create your views here.
@@ -11,9 +11,15 @@ rooms = [
 ]
 
 def home(request):
-    rooms = Room.objects.all()
+    q = request.GET.get('q') if request.GET.get('q') != None else ''
+    # the i in icontains means insensitive. contains means case sensitive
+    rooms = Room.objects.filter(topic__name__icontains=q)
+    
+    topics = Topic.objects.all()
+
     context = {
-        'rooms': rooms
+        'rooms': rooms,
+        'topics': topics
     }
     return render(request, 'base/home.html', context)
 
