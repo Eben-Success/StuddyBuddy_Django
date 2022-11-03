@@ -25,9 +25,13 @@ class Room(models.Model):
     # saves the first time we save an instance
     created = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['-updated', '-created']
+
 
     def __str__(self):
         return self.name
+
 
 
 class Message(models.Model):
