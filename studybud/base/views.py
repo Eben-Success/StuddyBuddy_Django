@@ -21,3 +21,8 @@ def room(request, pk):
     # id should be unique
     room = Room.objects.get(id=pk)
     return render(request, 'base/room.html')
+
+
+def createRoom(request):
+    context = {}
+    return render(request, 'base/room_form.html', context)
