@@ -7,7 +7,7 @@
 
     <p>
         Are you sure you want to delete "{{obj}}"?
-        <a href="{{ request.METTA.HTTP_REFERER }}">Go Back</a>
+        <a href="{{ request.META.HTTP_REFERER }}">Go Back</a>
         <input type="submit" value='Confirm' />
     </p>
 </form>
