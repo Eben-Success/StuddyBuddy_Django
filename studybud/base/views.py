@@ -67,7 +67,7 @@ def room(request, pk):
     room = Room.objects.get(id=pk)
     return render(request, 'base/room.html')
 
-@login_required(login_required='/login')
+@login_required(login_url='login')
 def createRoom(request):
     form = RoomForm()
     if request.method == 'POST':
