@@ -18,7 +18,7 @@ class Room(models.Model):
     name = models.CharField(max_length=200)
     # description can be empty, form can be empty while submitting form
     description = models.TextField(null=True, blank=True)
-    #participants = 
+    participants = models.ManyToManyField(User, related_name='participants', blank=True)
 
     # when saved, take a timestamp
     updated = models.DateTimeField(auto_now=True)
