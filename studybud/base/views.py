@@ -89,6 +89,7 @@ def home(request):
 def room(request, pk):
     # id should be unique
     room = Room.objects.get(id=pk)
+    messages = room.message_set.all()
     return render(request, 'base/room.html')
 
 @login_required(login_url='login')
