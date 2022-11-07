@@ -86,7 +86,7 @@ def updateRoom(request, pk):
     room = Room.objects.get(id=pk)
     form = RoomForm(instance=room)
 
-    if request.user != room.user:
+    if request.user != room.host:
         return HttpResponse('You are not allowed here')
 
     if request.method == 'POST':
