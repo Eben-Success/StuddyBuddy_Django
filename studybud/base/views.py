@@ -77,7 +77,7 @@ def home(request):
     
     topics = Topic.objects.all()
     room_count = rooms.count()
-    room_messages = Message.objects.all()
+    room_messages = Message.objects.filter(Q(room__topic__name__icontains=q))
 
     context = {
         'rooms': rooms,
@@ -109,11 +109,11 @@ def room(request, pk):
 @login_required(login_url='login')
 def createRoom(request):
     form = RoomForm()
-
-    if request.user != room.host:
-        return HttpResponse("You are not allowed here!!")
+    topics = Topic.objects.all()
 
     if request.method == 'POST':
+        topic_name = request.POST.get('topic')
+        topic, created = Topic.objects.get_or_create(name=topic_name)
         form = RoomForm(request.POST)
         if form.is_valid():
             form.save()
