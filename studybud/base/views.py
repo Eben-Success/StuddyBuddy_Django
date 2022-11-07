@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .models import Room, Topic
+from .models import Room, Topic, Message
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from .forms import RoomForm
@@ -89,7 +89,16 @@ def home(request):
 def room(request, pk):
     # id should be unique
     room = Room.objects.get(id=pk)
-    room_messages = room.message_set.all()
+    room_messages = room.message_set.all().order_by('-created')
+
+    if request.method == 'POST':
+        message = Message.objects.create(
+            user=request.user,
+            room=room,
+            body=request.POST.get('body')
+        )
+        return redirect('room', pk=room.id)
+
     context = {'room': room, 'room_messages': room_messages}
     return render(request, 'base/room.html', context)
 
