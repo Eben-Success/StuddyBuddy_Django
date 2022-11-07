@@ -89,8 +89,9 @@ def home(request):
 def room(request, pk):
     # id should be unique
     room = Room.objects.get(id=pk)
-    messages = room.message_set.all()
-    return render(request, 'base/room.html')
+    room_messages = room.message_set.all()
+    context = {'room': room, 'room_messages': room_messages}
+    return render(request, 'base/room.html', context)
 
 @login_required(login_url='login')
 def createRoom(request):
