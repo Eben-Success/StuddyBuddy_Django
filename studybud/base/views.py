@@ -192,8 +192,9 @@ def deleteMessage(request, pk):
 
 #     return render(request, 'base/update-user.html', {'form': form})
 
-@login_required()
+@login_required(login_url='login')
 def updateUser(request):
+    return render(request, 'base/update-user.html')
 
 
 
