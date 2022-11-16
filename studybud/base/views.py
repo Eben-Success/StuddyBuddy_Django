@@ -194,7 +194,16 @@ def deleteMessage(request, pk):
 
 @login_required(login_url='login')
 def updateUser(request):
-    return render(request, 'base/update-user.html')
+    user = user.request
+    form = UserForm(instance=user)
+    
+    if request.method == 'POST':
+        form = UserForm(request.POST,instance=user )
+        if form.is_valid():
+            form.save()
+            return redirect('user-profile', pk=user.id)
+        
+    return render(request, 'base/update-user.html', {'form': form})
 
 
 
