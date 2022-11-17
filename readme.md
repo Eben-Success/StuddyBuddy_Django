@@ -24,4 +24,22 @@ cd StudyBuddy
 # Let install virtualenv first
 pip install virtualenv
 
-# 
+# Then create a virtual environment:
+virtualenv envname
+```
+
+--> Activate the virtual environment:
+```bash
+envname/scripts/activate
+```
+
+--> Install the requirements:
+```bash
+pip install -r requirements.txt
+```
+
+### Running the App
+
+--> To run the App, use:
+```bash
+python manage.py runserver
