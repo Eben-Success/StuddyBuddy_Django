@@ -54,3 +54,10 @@ python manage.py runserver
 The development server will be started at https://127.0.0.1:8000/
 
 # App Preview:
+
+![App Prev](/StuddyBuddy_Django/studybud/static/images/App%20Prev.png)
+
+![App Prev](/StuddyBuddy_Django/studybud/static/images/App%20Prev1.png)
+
+
+![App Prev](/StuddyBuddy_Django/studybud/static/images/App%20Prev2.png)
