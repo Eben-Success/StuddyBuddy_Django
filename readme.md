@@ -1,4 +1,9 @@
+
+<div align='center>
+<img width="30%" src="">
+
 # StuddyBuddy
+</div>
 
 Study Buddy is a web application that allow users to create an account and log in.
 
