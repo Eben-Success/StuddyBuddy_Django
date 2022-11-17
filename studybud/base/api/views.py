@@ -2,6 +2,7 @@ from django.http import JsonResponse
 
 def getRoute(requests):
     routes = [
+        'GET /api',
         'GET /api/rooms', 
         'GET /api/rooms/:id'
     ]
