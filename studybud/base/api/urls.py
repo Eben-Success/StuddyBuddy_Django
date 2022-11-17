@@ -3,4 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.getRoute),
+    path('rooms/', views.getRooms),
 ]
