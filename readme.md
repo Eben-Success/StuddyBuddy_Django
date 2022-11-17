@@ -11,4 +11,17 @@ Users are able to get view the participants of a particular topic, they are able
 --> Clone the repository using the command below:
 
 ```bash
-git clone ```
+git clone  https://github.com/Eben-Success/StuddyBuddy_Django.git
+```
+
+--> Move into the directory where the project files are:
+```bash
+cd StudyBuddy
+```
+
+--> Create a virtual environment:
+```bash
+# Let install virtualenv first
+pip install virtualenv
+
+# 
