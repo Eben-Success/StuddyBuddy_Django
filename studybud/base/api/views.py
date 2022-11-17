@@ -5,4 +5,5 @@ def getRoute(requests):
         'GET /api/rooms', 
         'GET /api/rooms/:id'
     ]
-    return JsonResponse()
+    # Safe means we can use more the python dictionary inside this form.
+    return JsonResponse(routes, safe=False)
