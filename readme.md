@@ -14,18 +14,18 @@ Users are able to get view the participants of a particular topic, they are able
 
 ### Cloning this repository
 
---> Clone the repository using the command below:
+Clone the repository using the command below:
 
 ```bash
 git clone  https://github.com/Eben-Success/StuddyBuddy_Django.git
 ```
 
---> Move into the directory where the project files are:
+Move into the directory where the project files are:
 ```bash
 cd StudyBuddy
 ```
 
---> Create a virtual environment:
+ Create a virtual environment:
 ```bash
 # Let install virtualenv first
 pip install virtualenv
@@ -34,19 +34,19 @@ pip install virtualenv
 virtualenv envname
 ```
 
---> Activate the virtual environment:
+Activate the virtual environment:
 ```bash
 envname/scripts/activate
 ```
 
---> Install the requirements:
+Install the requirements:
 ```bash
 pip install -r requirements.txt
 ```
 
 ### Running the App
 
---> To run the App, use:
+To run the App, use:
 ```bash
 python manage.py runserver
 ```
@@ -56,5 +56,12 @@ The development server will be started at https://127.0.0.1:8000/
 
 # App Preview:
 
-![App Prev](/App%20Prev.png)
+![img.png](studybud/static/images/img1.png)
+
+![img.png](studybud/static/images/img2.png)
+
+![img.png](studybud/static/images/img.png)
+
+
+
 
