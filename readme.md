@@ -56,9 +56,27 @@ The development server will be started at https://127.0.0.1:8000/
 
 # App Preview:
 
+<div align="center">
+
+### Homepage
+
+</div>
+
 ![img.png](studybud/static/images/img1.png)
 
+<div align="center">
+
+### Login & Register 
+
+</div>
+
 ![img.png](studybud/static/images/img2.png)
+
+<div align="center">
+
+### Create Room & Add Topic of Interest
+
+</div>
 
 ![img.png](studybud/static/images/img.png)
 
